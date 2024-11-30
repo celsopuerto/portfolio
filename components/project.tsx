@@ -7,7 +7,7 @@ import { useRef } from "react";
 
 type ProjectProps = (typeof projectsData)[number];
 
-export default function Project({title, description, tags, imageUrl}: ProjectProps) {
+export default function Project({title, description, tags, imageUrl, link}: ProjectProps) {
     const ref = useRef<HTMLDivElement>(null);
     const { scrollYProgress } = useScroll({
     target: ref,
@@ -35,6 +35,14 @@ export default function Project({title, description, tags, imageUrl}: ProjectPro
                         <li className="bg-black/[0.7] px-3 py-1 text-[0.7rem] uppercase tracking-wider text-white rounded-full" key={index}>{tag}</li>
                     ))}
                 </ul>
+                {/* View Project Button */}
+                <a
+                href={link}
+                target="_blank"
+                className="mt-4 inline-block py-1.5 px-3 text-sm bg-blue-500 text-white rounded-full text-center transition-all duration-300 hover:bg-blue-600 focus:ring-2 focus:ring-blue-400 dark:bg-blue-700 dark:hover:bg-blue-600 dark:focus:ring-blue-500 sm:px-4 sm:py-2"
+                >
+                View Project
+                </a>
             </div>
 
             <Image src={imageUrl} alt="Project I worked on" quality={95} className="absolute hidden sm:block top-8 -right-40 w-[28.25rem] rounded-t-lg shadow-2xl transition 

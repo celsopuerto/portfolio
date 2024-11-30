@@ -7,6 +7,7 @@ import 'react-vertical-timeline-component/style.min.css';
 import { experiencesData } from '@/lib/data';
 import { useSectionInView } from '@/lib/hooks';
 import { useTheme } from '@/context/theme-context';
+import { FaMapMarkerAlt } from 'react-icons/fa';
 
 export default function Experience() {
     const { ref } = useSectionInView("Experience", 0.5);
@@ -32,12 +33,15 @@ export default function Experience() {
                 date={item.date}
                 icon={item.icon}
                 iconStyle={{
-                    background: theme === 'light' ? "white" : 'rgba(255, 255 ,255 0.15)',
+                    background: theme === 'light' ? "white" : 'rgba(255, 255, 255, 0.15)',
                     fontSize: "1.5rem",
                 }}
                 >
                     <h3 className="font-semibold capitalize">{item.title}</h3>
-                    <p className="font-normal !mt-0">{item.location}</p>
+                    <p className="font-normal !mt-0">
+                        <FaMapMarkerAlt className="inline-block mr-1 mb-1" />
+                        {item.location}
+                    </p>
                     <p className="!mt-1 !font-normal text-gray-700 dark:text-white/75">{item.description}</p>
                 </VerticalTimelineElement>
             </React.Fragment>

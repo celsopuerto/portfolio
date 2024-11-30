@@ -1,10 +1,10 @@
 import React from "react";
 import { CgWorkAlt } from "react-icons/cg";
 import { FaReact } from "react-icons/fa";
-import { LuGraduationCap } from "react-icons/lu";
-import corpcommentImg from "@/public/corpcomment.png";
-import rmtdevImg from "@/public/rmtdev.png";
-import wordanalyticsImg from "@/public/wordanalytics.png";
+import { GiBattleAxe } from "react-icons/gi";
+import kaTreasure from "@/public/katreasure.png";
+import symmetricCipher from "@/public/symmetricCipher.png";
+import researchTracker from "@/public/researchTracker.png";
 
 export const links = [
   {
@@ -35,52 +35,47 @@ export const links = [
 
 export const experiencesData = [
   {
-    title: "Graduated bootcamp",
-    location: "Miami, FL",
+    title: "SOLVE: SOLUTION CHALLENGE VISAYAS GRAND FINAL",
+    location: "Iloilo",
     description:
-      "I graduated after 6 months of studying. I immediately found a job as a front-end developer.",
-    icon: React.createElement(LuGraduationCap),
-    date: "2019",
+      'Our team, "FOUR", was selected as one of 5 teams out of 32 from the Visayas region to compete in the SOLVE: SOLUTION CHALLENGE VISAYAS GRAND FINAL in Iloilo City. We developed IT solutions, such as websites and apps, to address global challenges like zero hunger and other pressing issues, gaining valuable experience despite not securing a place.',
+    icon: React.createElement(GiBattleAxe),
+    date: "2024",
   },
   {
-    title: "Front-End Developer",
-    location: "Orlando, FL",
+    title: "Ka Treasure Water Terraces Mountain Resort",
+    location: "Catang, Argao ",
     description:
-      "I worked as a front-end developer for 2 years in 1 job and 1 year in another job. I also upskilled to the full stack.",
+      "I collaborated with my team to develop a comprehensive website for Ka Treasure Water Terraces Mountain Resort as our capstone project, addressing the lack of a proper reservation system by implementing features such as online booking, POS integration, QR scanning for approved bookings, email receipt delivery, and Gmail-based sign-in/up, enhancing the resort's operations and customer experience.",
     icon: React.createElement(CgWorkAlt),
-    date: "2019 - 2021",
-  },
-  {
-    title: "Full-Stack Developer",
-    location: "Houston, TX",
-    description:
-      "I'm now a full-stack developer working as a freelancer. My stack includes React, Next.js, TypeScript, Tailwind, Prisma and MongoDB. I'm open to full-time opportunities.",
-    icon: React.createElement(FaReact),
-    date: "2021 - present",
+    date: "2023 - Present",
   },
 ] as const;
 
 export const projectsData = [
   {
-    title: "CorpComment",
+    title: "KaTreasureEH",
     description:
-      "I worked as a full-stack developer on this startup project for 2 years. Users can give public feedback to companies.",
-    tags: ["React", "Next.js", "MongoDB", "Tailwind", "Prisma"],
-    imageUrl: corpcommentImg,
+      "All-in-one platform for seamless reservations, POS, entrance management, and more to enhance guest experiences.",
+    tags: ["Django", "Firebase", "HTML", "CSS", "JS"],
+    imageUrl: kaTreasure,
+    link: "https://katreasure.pythonanywhere.com/",
   },
   {
-    title: "rmtDev",
+    title: "symmetricCipher",
     description:
-      "Job board for remote developer jobs. I was the front-end developer. It has features like filtering, sorting and pagination.",
-    tags: ["React", "TypeScript", "Next.js", "Tailwind", "Redux"],
-    imageUrl: rmtdevImg,
+      "A Django app with symmetric encryption tools, supporting Caesar, Vigenère, Playfair, Columnar, and AES.",
+    tags: ["Django", "HTML", "CSS", "JS"],
+    imageUrl: symmetricCipher,
+    link: "https://symmetriccipher.pythonanywhere.com/",
   },
   {
-    title: "Word Analytics",
+    title: "researchTracker",
     description:
-      "A public web app for quick analytics on text. It shows word count, character count and social media post limits.",
-    tags: ["React", "Next.js", "SQL", "Tailwind", "Framer"],
-    imageUrl: wordanalyticsImg,
+      "The Excel Research Tracker is a VBA-powered tool that helps researchers track tasks, progress, and deadlines efficiently.",
+    tags: ["VBA", "Excel", "Macro", "Forms"],
+    imageUrl: researchTracker,
+    link: "https://github.com/celsopuerto/CTU-AC-Research-Tracker",
   },
 ] as const;
 
@@ -89,19 +84,16 @@ export const skillsData = [
   "CSS",
   "JavaScript",
   "TypeScript",
+  "Django",
+  "Java",
+  "PHP",
+  "Firebase",
   "React",
   "Next.js",
   "Node.js",
   "Git",
   "Tailwind",
-  "Prisma",
-  "MongoDB",
-  "Redux",
-  "GraphQL",
-  "Apollo",
-  "Express",
   "PostgreSQL",
   "Python",
-  "Django",
   "Framer Motion",
 ] as const;
