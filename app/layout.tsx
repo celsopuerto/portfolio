@@ -28,24 +28,6 @@ export default function RootLayout({
         
         <ThemeContextProvider>
           <ActiveSectionContextProvider>
-            <Head>
-            <script
-              type="text/javascript"
-              src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
-            ></script>
-            <script
-              dangerouslySetInnerHTML={{
-                __html: `
-                  function googleTranslateElementInit() {
-                    new google.translate.TranslateElement(
-                      { pageLanguage: "en" },
-                      "google_translate_element"
-                    );
-                  }
-                `,
-              }}
-            ></script>
-            </Head>
             <Header />
             {children}
             <Footer />
