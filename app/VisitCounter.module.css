@@ -1,0 +1,29 @@
+.counter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: default;
+  }
+  
+  .title {
+    text-align: center;
+    cursor: default;
+  }
+  
+  .glitchContainer {
+    display: inline-flex;
+    cursor: default;
+  }
+  
+  .glitchChar {
+    position: relative;
+    display: inline-block;
+    cursor: default;
+    transition: transform 0.1s ease;
+  }
+  
+  .glitchChar:hover {
+    transform: scale(1.1);
+    cursor: default;
+  }
+  

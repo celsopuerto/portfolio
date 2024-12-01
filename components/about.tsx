@@ -4,7 +4,8 @@ import React from 'react'
 import SectionHeading from '@/components/section-heading'
 import { motion } from 'framer-motion';
 import { useSectionInView } from '@/lib/hooks';
-import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa';
+import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt, FaChartBar } from 'react-icons/fa';
+import VisitCounter from './visit-counter';
 
 export default function PersonalInformation() {
     const { ref } = useSectionInView("About");
@@ -33,6 +34,9 @@ export default function PersonalInformation() {
                 <div className="flex items-center gap-3">
                     <FaMapMarkerAlt className="text-green-500 text-xl" />
                     <span className="font-medium">Suba, Argao, Cebu 6021</span>
+                </div>
+                <div className="flex items-center gap-3">
+                    <FaChartBar className="text-gray-800 text-xl" /><VisitCounter />
                 </div>
             </div>
         </motion.section>
