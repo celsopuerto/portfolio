@@ -53,7 +53,7 @@ export default function Experience() {
         {/* CERTIFICATES */}
 
 
-    <div ref={ref} className="certifications-wall">
+    <div className="certifications-wall">
             
     {certificationsData.map((cert, index) => (
         <motion.div
