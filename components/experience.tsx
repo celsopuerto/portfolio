@@ -4,10 +4,11 @@ import React from 'react'
 import SectionHeading from './section-heading';
 import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
-import { experiencesData } from '@/lib/data';
+import { experiencesData, certificationsData } from '@/lib/data';
 import { useSectionInView } from '@/lib/hooks';
 import { useTheme } from '@/context/theme-context';
 import { FaMapMarkerAlt } from 'react-icons/fa';
+import { motion } from 'framer-motion';
 
 export default function Experience() {
     const { ref } = useSectionInView("Experience", 0.5);
@@ -47,6 +48,41 @@ export default function Experience() {
             </React.Fragment>
         ))}
     </VerticalTimeline>
+
+
+        {/* CERTIFICATES */}
+
+
+    <div ref={ref} className="certifications-wall">
+            
+    {certificationsData.map((cert, index) => (
+        <motion.div
+        key={index}
+        className="certification-card"
+        whileHover={{ scale: 1.1 }} // Zoom effect on hover
+        transition={{ type: "spring", stiffness: 300 }} // Smooth transition
+        >
+        <div className="certification-image">
+            {/* Display the certificate image */}
+            <img
+            src={cert.image}
+            alt={cert.name}
+            className="certification-image borderBlack"
+            />
+        </div>
+        <h3>{cert.name}</h3>
+        <p>{cert.description}</p>
+        {cert.credentialLink !== "" ? (
+            <a href={cert.credentialLink} target="_blank" rel="noopener noreferrer">
+            View Credential
+            </a>
+        ) : (
+            <a href=""></a>
+        )}
+        </motion.div>
+    ))}
+    </div>
   </section>
+  
   );
 }

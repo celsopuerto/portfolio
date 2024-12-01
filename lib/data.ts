@@ -1,10 +1,12 @@
 import React from "react";
 import { CgWorkAlt } from "react-icons/cg";
-import { FaReact } from "react-icons/fa";
 import { GiBattleAxe } from "react-icons/gi";
 import kaTreasure from "@/public/katreasure.png";
 import symmetricCipher from "@/public/symmetricCipher.png";
 import researchTracker from "@/public/researchTracker.png";
+import freeCodeCampCert from "@/public/certificates/freecodecampResponsiveWebDesign.png";
+import creativeWebDesignCert from "@/public/certificates/creativeWebDesign.jpg";
+
 
 export const links = [
   {
@@ -96,4 +98,19 @@ export const skillsData = [
   "PostgreSQL",
   "Python",
   "Framer Motion",
+] as const;
+
+export const certificationsData = [
+  {
+    name: "Responsive Web Design - freeCodeCamp",
+    image: freeCodeCampCert.src, // Certificate image
+    description: "Responsive Web Design certification from freeCodeCamp, showcasing skills in designing responsive websites.",
+    credentialLink: "https://www.freecodecamp.org/certification/celsopuerto/responsive-web-design",
+  },
+  {
+    name: "Creative Web Design NCII - Call Center Academy",
+    image: creativeWebDesignCert.src, // Certificate image
+    description: "Creative Web Design NCII certification from Call Center Academy, focusing on web design principles and skills.",
+    credentialLink: "",
+  },
 ] as const;
