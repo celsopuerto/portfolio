@@ -9,7 +9,7 @@ on:
       - main  # Deploy preview for pull requests
 
 jobs:
-  deploy:
+  build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Code
@@ -23,6 +23,24 @@ jobs:
       - name: Install Dependencies
         run: npm install
 
+      - name: Build the Project
+        run: npm run build  # Adjust the build command if needed
+
+      - name: Upload Build Artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: build-output
+          path: ./path-to-build-folder  # Adjust path to your build folder
+
+  deploy:
+    runs-on: ubuntu-latest
+    needs: build  # Ensure the deploy job runs after the build job
+    steps:
+      - name: Download Build Artifact
+        uses: actions/download-artifact@v3
+        with:
+          name: build-output
+
       - name: Deploy to Vercel
         uses: amondnet/vercel-action@v20
         with:
@@ -32,3 +50,4 @@ jobs:
           vercel-redirects: 'false'  # Optional: Adjust if needed
         env:
           VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}  # Secret token for Vercel
+
