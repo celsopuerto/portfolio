@@ -78,7 +78,7 @@ export const projectsData = [
     "Parley is a real-time chat app with authentication and a user-friendly interface.",
     tags: ["React", "Node.js", "Express", "MongoDB", "Socket.io", "Vite", "Tailwind", "TypeScript"],
     imageUrl: parley,
-    link: "https://parley-chat-app.onrender.com/",
+    link: "https://parley-chat-app.onrender.com",
   },
   {
     title: "researchTracker",
