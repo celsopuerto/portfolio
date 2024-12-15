@@ -6,6 +6,7 @@ import symmetricCipher from "@/public/symmetricCipher.png";
 import researchTracker from "@/public/researchTracker.png";
 import freeCodeCampCert from "@/public/certificates/freecodecampResponsiveWebDesign.png";
 import creativeWebDesignCert from "@/public/certificates/creativeWebDesign.jpg";
+import parley from "@/public/parley.png";
 
 
 export const links = [
@@ -72,9 +73,17 @@ export const projectsData = [
     link: "https://symmetriccipher.pythonanywhere.com/",
   },
   {
+    title: "parley",
+    description:
+    "Parley is a real-time chat app with authentication and a user-friendly interface.",
+    tags: ["React", "Node.js", "Express", "MongoDB", "Socket.io", "Vite", "Tailwind", "TypeScript"],
+    imageUrl: parley,
+    link: "https://parley-chat-app.onrender.com/",
+  },
+  {
     title: "researchTracker",
     description:
-      "The Excel Research Tracker is a VBA-powered tool that helps researchers track tasks, progress, and deadlines efficiently.",
+      "The Excel Research Tracker is a VBA-powered tool that helps researchers track tasks, progress, and deadlines.",
     tags: ["VBA", "Excel", "Macro", "Forms"],
     imageUrl: researchTracker,
     link: "https://github.com/celsopuerto/CTU-AC-Research-Tracker",
